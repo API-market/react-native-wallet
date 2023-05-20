@@ -22,8 +22,13 @@ function _showAddPassControllerFromFile(Module, filePath) {
   return Module.showAddPassControllerFromFile(filePath);
 }
 
+function _passes(Module, callback) {
+  Module.passes(callback)
+}
+
 module.exports = {
   _canAddPasses,
   _showAddPassControllerFromURL,
   _showAddPassControllerFromFile,
+  _passes,
 }
