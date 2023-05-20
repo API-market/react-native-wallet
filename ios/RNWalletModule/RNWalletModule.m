@@ -35,9 +35,11 @@ RCT_EXPORT_METHOD(
     NSArray *passes = [self.passLibrary passes];
 
     NSDictionary *dict = [NSDictionary dictionaryWithObjects:passes forKeys:[passes valueForKey:@"serialNumber"]];
-    NSArray*serials=[dict allKeys];
+    // NSArray*serials=[dict allKeys];
+    // callback(@[[NSNull null], serials]);
 
-    callback(@[[NSNull null], serials]);
+    NSArray*passesArray=[dict objectForKey:@"serialNumber"];
+    callback(@[[NSNull null], passesArray]);
 }
 
 RCT_EXPORT_METHOD(
