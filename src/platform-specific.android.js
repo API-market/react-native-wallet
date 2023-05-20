@@ -19,8 +19,13 @@ function _showAddPassControllerFromFile(Module, filepath) {
   return Promise.reject("Android can't add passes");
 }
 
+function _passes(Module, callback) {
+  callback("Android can't list passes", null)
+}
+
 module.exports = {
   _canAddPasses,
   _showAddPassControllerFromURL,
   _showAddPassControllerFromFile,
+  _passes,
 }

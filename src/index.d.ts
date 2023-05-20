@@ -20,4 +20,11 @@ declare module 'react-native-wallet' {
    * @return Promise Passing a boolean
    */
   export function showAddPassControllerFromFile(filepath: string): Promise<boolean>;
+
+  /**
+   * Calls the callback provided with the list of installed passes (serial numbers)
+   * @param callback A callback which will receive an error or the pass serials
+   */
+  export function passes(callback: (err: Error, passes: any) => void): void;
+
 }
